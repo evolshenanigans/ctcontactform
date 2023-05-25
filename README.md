@@ -1,3 +1,6 @@
+*important to note.* comments have been added to all the code to help you better understand.
+** There is a bug where the background stays in darkmode. Next's newest update is not playing fair with next-themes. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
