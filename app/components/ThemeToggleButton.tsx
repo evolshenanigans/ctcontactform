@@ -17,7 +17,8 @@ interface ThemeToggleButtonProps {
         className="bg-black-700 hover:bg-black w-28 rounded-md border-purple-400 border-2 p-4 flex justify-center items-center" // Set the button style
         onClick={toggleTheme} // Set the click handler to the toggleTheme function passed in through props
       >
-        <Image src={sun} alt="logo" width={50} height={50} /> // Display the sun icon
+        <Image src={sun} alt="logo" width={50} height={50} /> 
+        {/* Display the sun icon */}
       </button>
     ) : (
     // If the current theme is not 'dark' (i.e., it's 'light'), render a button with the moon icon to switch to dark mode
@@ -25,7 +26,8 @@ interface ThemeToggleButtonProps {
         className="bg-gray-100 w-28 rounded-md border-purple-400 border-2 p-4 hover:bg-gray-300 flex justify-center items-center" // Set the button style
         onClick={toggleTheme} // Set the click handler to the toggleTheme function passed in through props
       >
-        <Image src={moon} alt="logo" width={50} height={50} /> // Display the moon icon
+        <Image src={moon} alt="logo" width={50} height={50} /> 
+        {/* Display the moon icon */}
       </button>
     );
   };

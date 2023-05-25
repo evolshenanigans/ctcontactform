@@ -14,7 +14,8 @@ const Button: React.FC<ButtonProps> = ({ onClick, children }) => (
     type="submit" // Set the button type as submit
     onClick={onClick} // Set the function to call when the button is clicked
   >
-    {children} // Render the children inside the button
+    {children} 
+    {/* render the children inside the component */}
   </button>
 );
 

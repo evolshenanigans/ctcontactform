@@ -18,9 +18,10 @@ const Modal: React.FC<ModalProps> = ({ show, children }) => {
   return (
     // This div is a semi-transparent overlay that covers the entire screen
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
-      // This div is a white box that contains the modal's contents
+      {/* This div is a white box that contains the modal's contents */}
       <div className="bg-white rounded p-8">
-        {children} // Render the contents of the modal
+        {children} 
+        {/* Render the contents of the modal */}
       </div>
     </div>
   );

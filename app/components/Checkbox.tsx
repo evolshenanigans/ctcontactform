@@ -12,7 +12,7 @@ interface CheckboxProps {
 // Define the Checkbox component
 const Checkbox: React.FC<CheckboxProps> = ({ name, checked, onChange, label }) => (
   <div className="flex items-center text-white">
-    // Render the checkbox input element
+    {/* Render the checkbox input element */}
     <input
       className="mr-2" // Add a margin to the right of the checkbox
       type="checkbox" // Set the input type to checkbox
@@ -20,7 +20,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ name, checked, onChange, label }) =
       checked={checked} // Set whether the checkbox is checked
       onChange={onChange} // Set the function to call when the checkbox is changed
     />
-    // Render the label for the checkbox
+    {/* Render the label for the checkbox */}
     <label>{label}</label>
   </div>
 );
