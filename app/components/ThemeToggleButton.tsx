@@ -5,7 +5,7 @@ import moon from '../components/Images/nosunicon.png'
 
 // Define the props that the ThemeToggleButton component expects to receive
 interface ThemeToggleButtonProps {
-    currentTheme: string; // The current theme, either 'dark' or 'light'
+    currentTheme: string | undefined; // The current theme, either 'dark' or 'light'
     toggleTheme: () => void; // A function to toggle the theme
   }
   

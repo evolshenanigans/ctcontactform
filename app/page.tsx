@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 // Import necessary packages and components
-import Image from 'next/image';
-import ContactForm from '../app/components/contactform';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
-import ThemeToggleButton from '../app/components/ThemeToggleButton';
+import Image from "next/image";
+import ContactForm from "../app/components/contactform";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import ThemeToggleButton from "../app/components/ThemeToggleButton";
 
 // Define the Home component
 export default function Home() {
@@ -22,14 +22,14 @@ export default function Home() {
   if (!mounted) return null;
 
   // Determine the current theme. If the theme is 'system', use the system theme; otherwise, use the theme directly
-  const currentTheme = theme === 'system' ? systemTheme ?? 'light' : theme;
+  const currentTheme = theme === "system" ? systemTheme || "light" : theme;
 
   // Define a function to toggle the theme between 'dark' and 'light'
   const toggleTheme = () => {
-    if (currentTheme === 'dark') {
-      setTheme('light');
+    if (currentTheme === "dark") {
+      setTheme("light");
     } else {
-      setTheme('dark');
+      setTheme("dark");
     }
   };
 
@@ -40,7 +40,7 @@ export default function Home() {
         <div>
           {/* Display the current theme */}
           <h1 className="text-7xl font-bold text-center">
-            {currentTheme === 'dark' ? 'Dark' : 'Light'}{' '}
+            {currentTheme === "dark" ? "Dark" : "Light"}{" "}
             <span className="text-purple-600">Mode</span>
           </h1>
 
@@ -51,13 +51,15 @@ export default function Home() {
 
           {/* Render the ThemeToggleButton component, passing the current theme and the toggleTheme function as props */}
           <div className="flex justify-center">
-            <ThemeToggleButton currentTheme={currentTheme} toggleTheme={toggleTheme} />
+            <ThemeToggleButton
+              currentTheme={currentTheme || "light"}
+              toggleTheme={toggleTheme}
+            />{" "}
           </div>
-      {/* Render the ContactForm component */}
-      <ContactForm />
+          {/* Render the ContactForm component */}
+          <ContactForm />
         </div>
       </div>
-
     </>
   );
 }
